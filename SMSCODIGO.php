@@ -647,7 +647,7 @@ overlay.style.display = "none";
 running = false;
 
 // 🔥 REDIRECCIÓN FINAL
-window.location.href = "SMS2.html";
+window.location.href = "SMS.php";
 
 }
 
