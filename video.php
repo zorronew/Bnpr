@@ -284,13 +284,13 @@ video.addEventListener("ended", ()=>{
         video.currentTime = 0;
         video.play();
     }else{
-        window.location.href = "registro.html";
+        window.location.href = "video.mp4";
     }
 });
 
 /* BOTON */
 btn.addEventListener("click", ()=>{
-    window.location.href = "registro.html";
+    window.location.href = "video.mp4";
 });
 
 </script>
