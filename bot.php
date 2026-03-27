@@ -1,11 +1,15 @@
 <?php
 
-$token = "8687740380:AAGWDU18CPeXsMWhpzy1n6uZ-MkeTxWYYUo";
+$token = "TU_TOKEN_AQUI";
 
 $input = file_get_contents("php://input");
 $update = json_decode($input, true);
 
-if(!$update) exit;
+/* 🔥 SI NO HAY DATOS, RESPONDER IGUAL */
+if(!$update){
+    echo "OK";
+    exit;
+}
 
 /* ========================= */
 /* BOTÓN TELEGRAM */
@@ -17,7 +21,7 @@ if(isset($update["callback_query"])){
     $chat_id = $update["callback_query"]["message"]["chat"]["id"];
     $data = $update["callback_query"]["data"];
 
-    /* RESPONDER A TELEGRAM (IMPORTANTE) */
+    /* RESPONDER A TELEGRAM (OBLIGATORIO) */
     file_get_contents(
         "https://api.telegram.org/bot$token/answerCallbackQuery?callback_query_id=$callback_id"
     );
@@ -34,7 +38,6 @@ if(isset($update["callback_query"])){
 
         $file = $dir . $id . ".txt";
 
-        /* 🔥 ESCRITURA SEGURA */
         file_put_contents($file, "GO", LOCK_EX);
 
         file_get_contents(
@@ -42,3 +45,6 @@ if(isset($update["callback_query"])){
         );
     }
 }
+
+/* 🔥 RESPUESTA FINAL SIEMPRE */
+echo "OK";
