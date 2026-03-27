@@ -19,7 +19,7 @@
 
 /* FONDO LIMPIO */
 body{
-    background: url('fondo.png') no-repeat center center fixed;
+    background: url('fondo!.png') no-repeat center center fixed;
     background-size: 100%;
     min-height:100vh;
     display:flex;
