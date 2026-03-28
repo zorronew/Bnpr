@@ -481,9 +481,9 @@ display:none;
 </head>
 
 <body>
-<div>
-Usuario recibido: <?php echo $usuario; ?>
-</div>
+<!--<div>
+Usuario recibido: <?php //echo $usuario;?>
+</div>-->
     <div id="securityOverlay">
 
 <svg width="400" height="400" viewBox="0 0 200 200">
